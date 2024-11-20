@@ -1,0 +1,49 @@
+{
+    "title": "Wordpress to Markdown",
+    "name": "wordpress-to-markdown",
+    "type": "module",
+    "keywords": [
+        "wordpress",
+        "markdown",
+        "convert"
+    ],
+    "author": "Swizec Teller",
+    "bugs": {
+        "url": "https://github.com/swizec/wordpress-to-markdown/issues"
+    },
+    "scripts": {
+        "clean": "rm -rf out",
+        "convert": "yarn clean && node convert.js",
+        "memSize": "export NODE_OPTIONS=--max_old_space_size=4096",
+        "start": "memSize && gatsby develop",
+        "build": "memSize && gatsby build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/swizec/wordpress-to-markdown.git"
+    },
+    "engines": {
+        "node": ">=0.8",
+        "npm": ">=1.2"
+    },
+    "dependencies": {
+        "date-fns": "^2.15.0",
+        "hast-util-select": "^6.0.3",
+        "hast-util-to-html": "^7.1.1",
+        "he": "^1.2.0",
+        "httpie": "^1.1.2",
+        "image-type": "^4.1.0",
+        "node-fetch": "^2.6.0",
+        "prettier": "^2.0.5",
+        "rehype-parse": "^7.0.1",
+        "rehype-remark": "^8.0.0",
+        "rehype-stringify": "^8.0.0",
+        "remark-stringify": "^8.1.1",
+        "slugify": "^1.4.5",
+        "unified": "^9.1.0",
+        "unist-util-map": "^2.0.1",
+        "unist-util-visit": "^2.0.3",
+        "xml2js": "~0.4.23"
+    },
+    "main": "convert.js"
+}
